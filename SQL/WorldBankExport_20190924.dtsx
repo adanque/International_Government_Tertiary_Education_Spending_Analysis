@@ -1,0 +1,2397 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="9/24/2019 10:23:51 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEVLOPR"
+  DTS:CreatorName="DEVLOPR\Alan"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{233EAED0-BF65-484A-AED3-3F66A4EA7E89}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="WorldBankExport_20190924"
+  DTS:ProtectionLevel="0"
+  DTS:VersionGUID="{1512BE05-8DBD-4E09-BD75-4CA089896CA8}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{4CE2FF9E-F0AC-4B21-B253-5F593E713FD9}"
+      DTS:ObjectName="DestinationConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\Data\DSC530\WorldBankData_Cleaned.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="rowid"
+              DTS:DTSID="{9E47D823-EBBF-4297-82EE-457088B9456E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="indicator"
+              DTS:DTSID="{C0750E44-D427-4174-9BA9-669C6A83FA61}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{777B2E50-F763-4137-868D-44996CA248FF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="cnts"
+              DTS:DTSID="{E33B863F-BA37-448E-A3B3-0D33F3907095}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1970"
+              DTS:DTSID="{901A0FB7-E6A6-40A5-A088-E4D1069F0C75}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1971"
+              DTS:DTSID="{BADB7391-A31D-427B-93C3-A24BBE488D38}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1972"
+              DTS:DTSID="{EFD89AE0-3389-4655-9D97-02854B30EB9F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1973"
+              DTS:DTSID="{3CEBEDAA-A3F5-470A-B3B2-6A65D7965E62}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1974"
+              DTS:DTSID="{A6FC9AC5-B7A0-41A8-A62E-295275A35692}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1975"
+              DTS:DTSID="{E1087287-7C09-4EAF-AFCD-B4CAE2949DBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1976"
+              DTS:DTSID="{7C4F556A-7E4F-4B0A-89A2-6A591F5DB19C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1977"
+              DTS:DTSID="{0C338BC5-3113-4830-99AE-2E70F5E99332}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1978"
+              DTS:DTSID="{C2B394CF-8B61-4A07-9505-C2D8F75DA4CC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1979"
+              DTS:DTSID="{5CC37412-A93B-4372-BCFD-AAC41AD25689}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1980"
+              DTS:DTSID="{8B899284-F4F2-4D2C-995E-82BFA107238D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1981"
+              DTS:DTSID="{4CBB3B98-D8BB-4651-944C-9D5C0BCC5D30}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1982"
+              DTS:DTSID="{96675C3B-5E15-4B28-B6C8-2F1028EB6AB8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1983"
+              DTS:DTSID="{6CDE3A03-8D05-458B-9AF9-DFF5100901D6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1984"
+              DTS:DTSID="{4588D0A9-F829-458B-BF39-F45C914E9253}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1985"
+              DTS:DTSID="{8FBF510E-1AC8-418C-9C18-BE8540CEF4C2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1986"
+              DTS:DTSID="{FD12A19F-C4FA-4941-B92B-0D89981FF509}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1987"
+              DTS:DTSID="{E1A357EF-4566-44B3-8241-2A88FFCDA338}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1988"
+              DTS:DTSID="{A8DD4588-16C3-4EF1-BC5D-5D851EAE2652}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1989"
+              DTS:DTSID="{E7BD3BC4-61F2-4EFF-8F24-910639E6C942}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1990"
+              DTS:DTSID="{753FD387-9FD8-48C5-8831-63D5391ED71C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1991"
+              DTS:DTSID="{481434F4-0BF0-42B2-96A8-20FD1ABA77E2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1992"
+              DTS:DTSID="{635D57DF-1FF8-4C41-9871-B7E79715A141}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1993"
+              DTS:DTSID="{DCA87193-9B81-421D-8F45-0C2196D5A47A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1994"
+              DTS:DTSID="{E6F568A8-DBD4-4AED-9360-793C0B1A2332}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1995"
+              DTS:DTSID="{4F8BD444-70ED-46D3-8F63-EF9411CFB43B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1996"
+              DTS:DTSID="{43CBE09A-1177-4A3B-AE0A-927ADA60993A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1997"
+              DTS:DTSID="{505EF613-8010-49B4-B40A-0C4395D16A7A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1998"
+              DTS:DTSID="{F4C27114-E17B-4989-867C-2AEA9EED88EA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_1999"
+              DTS:DTSID="{D295556D-B313-4AF3-AF73-3924AE998B3E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2000"
+              DTS:DTSID="{E2C62837-173F-4511-877A-4DA3BC5C575B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2001"
+              DTS:DTSID="{C41C98A5-C3F8-4923-A823-B26189F597D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2002"
+              DTS:DTSID="{53A136BE-8E1B-477A-ADE5-57FFBF1EE636}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2003"
+              DTS:DTSID="{39A40CB7-272A-468A-A321-3927CCE65D53}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2004"
+              DTS:DTSID="{196EEF55-79E1-4D92-8F18-1C4E595F6CFC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2005"
+              DTS:DTSID="{D457A75C-3E8C-44E9-BFD5-CEF6EA723CE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2006"
+              DTS:DTSID="{FCD6C03E-1849-4BCC-B27F-07A5FE3168AF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2007"
+              DTS:DTSID="{8C29FE62-FB11-4FE1-BD4E-457CDB6B2E5B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2008"
+              DTS:DTSID="{61187B25-58AE-45AD-A8EF-18CA6CD1CA89}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2009"
+              DTS:DTSID="{54FFD842-FEB8-41E8-AC1F-9C8A18C81626}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2010"
+              DTS:DTSID="{74019DB0-16DF-419B-B20F-08899A2543BA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2011"
+              DTS:DTSID="{25C97BDF-CBF2-4F23-BE5E-342B445956FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2012"
+              DTS:DTSID="{219AA63E-4245-4BC5-94CE-9C78C8D33AA0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2013"
+              DTS:DTSID="{1538AFEB-5ADC-4611-BE66-094A577CB7DF}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2014"
+              DTS:DTSID="{B4A3B955-C88D-4070-993F-EB6DF0100E1E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2015"
+              DTS:DTSID="{A829040A-F8A0-4EC6-BF25-91EDFEE3989A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="31"
+              DTS:DataType="131"
+              DTS:DataPrecision="38"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR_2016"
+              DTS:DTSID="{43185063-3253-41B2-9355-C1D2008B7AAD}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{5E92D08B-D494-4BE3-ADBD-3A7E01006E99}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=DSC530;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{EC5E5C4B-B3A5-49DD-BBB2-CDA38291DA33}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Destination - WorldBankData_Cleaned_csv"
+              validateExternalMetadata="False">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[rowid]"
+                      cachedDataType="i4"
+                      cachedName="rowid"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[rowid]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[rowid]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[indicator]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="indicator"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[indicator]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[indicator]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[cnts]"
+                      cachedDataType="i4"
+                      cachedName="cnts"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[cnts]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[cnts]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1970]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1970"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1970]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1970]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1971]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1971"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1971]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1971]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1972]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1972"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1972]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1972]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1973]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1973"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1973]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1973]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1974]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1974"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1974]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1974]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1975]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1975"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1975]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1975]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1976]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1976"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1976]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1976]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1977]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1977"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1977]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1977]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1978]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1978"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1978]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1978]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1979]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1979"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1979]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1979]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1980]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1980"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1980]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1980]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1981]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1981"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1981]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1981]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1982]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1982"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1982]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1982]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1983]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1983"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1983]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1983]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1984]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1984"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1984]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1984]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1985]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1985"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1985]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1985]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1986]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1986"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1986]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1986]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1987]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1987"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1987]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1987]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1988]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1988"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1988]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1988]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1989]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1989"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1989]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1989]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1990]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1990"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1990]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1990]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1991]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1991"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1991]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1991]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1992]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1992"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1992]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1992]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1993]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1993"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1993]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1993]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1994]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1994"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1994]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1994]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1995]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1995"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1995]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1995]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1996]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1996"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1996]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1996]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1997]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1997"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1997]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1997]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1998]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1998"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1998]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1998]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_1999]"
+                      cachedDataType="numeric"
+                      cachedName="YR_1999"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1999]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1999]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2000]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2000"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2000]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2000]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2001]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2001"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2001]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2001]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2002]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2002"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2002]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2002]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2003]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2003"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2003]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2003]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2004]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2004"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2004]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2004]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2005]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2005"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2005]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2005]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2006]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2006"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2006]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2006]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2007]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2007"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2007]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2007]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2008]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2008"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2008]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2008]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2009]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2009"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2009]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2009]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2010]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2010"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2010]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2010]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2011]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2011"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2011]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2011]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2012]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2012"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2012]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2012]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2013]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2013"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2013]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2013]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2014]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2014"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2014]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2014]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2015]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2015"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2015]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2015]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].Columns[YR_2016]"
+                      cachedDataType="numeric"
+                      cachedName="YR_2016"
+                      cachedPrecision="28"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2016]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2016]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[rowid]"
+                      dataType="i4"
+                      name="rowid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="indicator" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[cnts]"
+                      dataType="i4"
+                      name="cnts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1970]"
+                      dataType="numeric"
+                      name="YR_1970"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1971]"
+                      dataType="numeric"
+                      name="YR_1971"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1972]"
+                      dataType="numeric"
+                      name="YR_1972"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1973]"
+                      dataType="numeric"
+                      name="YR_1973"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1974]"
+                      dataType="numeric"
+                      name="YR_1974"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1975]"
+                      dataType="numeric"
+                      name="YR_1975"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1976]"
+                      dataType="numeric"
+                      name="YR_1976"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1977]"
+                      dataType="numeric"
+                      name="YR_1977"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1978]"
+                      dataType="numeric"
+                      name="YR_1978"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1979]"
+                      dataType="numeric"
+                      name="YR_1979"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1980]"
+                      dataType="numeric"
+                      name="YR_1980"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1981]"
+                      dataType="numeric"
+                      name="YR_1981"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1982]"
+                      dataType="numeric"
+                      name="YR_1982"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1983]"
+                      dataType="numeric"
+                      name="YR_1983"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1984]"
+                      dataType="numeric"
+                      name="YR_1984"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1985]"
+                      dataType="numeric"
+                      name="YR_1985"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1986]"
+                      dataType="numeric"
+                      name="YR_1986"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1987]"
+                      dataType="numeric"
+                      name="YR_1987"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1988]"
+                      dataType="numeric"
+                      name="YR_1988"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1989]"
+                      dataType="numeric"
+                      name="YR_1989"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1990]"
+                      dataType="numeric"
+                      name="YR_1990"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1991]"
+                      dataType="numeric"
+                      name="YR_1991"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1992]"
+                      dataType="numeric"
+                      name="YR_1992"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1993]"
+                      dataType="numeric"
+                      name="YR_1993"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1994]"
+                      dataType="numeric"
+                      name="YR_1994"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1995]"
+                      dataType="numeric"
+                      name="YR_1995"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1996]"
+                      dataType="numeric"
+                      name="YR_1996"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1997]"
+                      dataType="numeric"
+                      name="YR_1997"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1998]"
+                      dataType="numeric"
+                      name="YR_1998"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_1999]"
+                      dataType="numeric"
+                      name="YR_1999"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2000]"
+                      dataType="numeric"
+                      name="YR_2000"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2001]"
+                      dataType="numeric"
+                      name="YR_2001"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2002]"
+                      dataType="numeric"
+                      name="YR_2002"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2003]"
+                      dataType="numeric"
+                      name="YR_2003"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2004]"
+                      dataType="numeric"
+                      name="YR_2004"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2005]"
+                      dataType="numeric"
+                      name="YR_2005"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2006]"
+                      dataType="numeric"
+                      name="YR_2006"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2007]"
+                      dataType="numeric"
+                      name="YR_2007"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2008]"
+                      dataType="numeric"
+                      name="YR_2008"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2009]"
+                      dataType="numeric"
+                      name="YR_2009"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2010]"
+                      dataType="numeric"
+                      name="YR_2010"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2011]"
+                      dataType="numeric"
+                      name="YR_2011"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2012]"
+                      dataType="numeric"
+                      name="YR_2012"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2013]"
+                      dataType="numeric"
+                      name="YR_2013"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2014]"
+                      dataType="numeric"
+                      name="YR_2014"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2015]"
+                      dataType="numeric"
+                      name="YR_2015"
+                      precision="38" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input].ExternalColumns[YR_2016]"
+                      dataType="numeric"
+                      name="YR_2016"
+                      precision="38" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - EDATABLETOREVIEW"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[EDATABLETOREVIEW]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[rowid]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[rowid]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[rowid]"
+                      name="rowid"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[indicator]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[indicator]"
+                      name="indicator"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[cnts]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[cnts]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[cnts]"
+                      name="cnts"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1970]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1970]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1970]"
+                      name="YR_1970"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1971]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1971]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1971]"
+                      name="YR_1971"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1972]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1972]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1972]"
+                      name="YR_1972"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1973]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1973]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1973]"
+                      name="YR_1973"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1974]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1974]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1974]"
+                      name="YR_1974"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1975]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1975]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1975]"
+                      name="YR_1975"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1976]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1976]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1976]"
+                      name="YR_1976"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1977]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1977]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1977]"
+                      name="YR_1977"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1978]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1978]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1978]"
+                      name="YR_1978"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1979]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1979]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1979]"
+                      name="YR_1979"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1980]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1980]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1980]"
+                      name="YR_1980"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1981]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1981]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1981]"
+                      name="YR_1981"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1982]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1982]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1982]"
+                      name="YR_1982"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1983]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1983]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1983]"
+                      name="YR_1983"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1984]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1984]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1984]"
+                      name="YR_1984"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1985]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1985]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1985]"
+                      name="YR_1985"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1986]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1986]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1986]"
+                      name="YR_1986"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1987]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1987]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1987]"
+                      name="YR_1987"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1988]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1988]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1988]"
+                      name="YR_1988"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1989]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1989]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1989]"
+                      name="YR_1989"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1990]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1990]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1990]"
+                      name="YR_1990"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1991]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1991]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1991]"
+                      name="YR_1991"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1992]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1992]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1992]"
+                      name="YR_1992"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1993]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1993]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1993]"
+                      name="YR_1993"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1994]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1994]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1994]"
+                      name="YR_1994"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1995]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1995]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1995]"
+                      name="YR_1995"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1996]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1996]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1996]"
+                      name="YR_1996"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1997]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1997]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1997]"
+                      name="YR_1997"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1998]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1998]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1998]"
+                      name="YR_1998"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1999]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1999]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_1999]"
+                      name="YR_1999"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2000]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2000]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2000]"
+                      name="YR_2000"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2001]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2001]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2001]"
+                      name="YR_2001"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2002]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2002]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2002]"
+                      name="YR_2002"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2003]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2003]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2003]"
+                      name="YR_2003"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2004]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2004]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2004]"
+                      name="YR_2004"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2005]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2005]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2005]"
+                      name="YR_2005"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2006]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2006]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2006]"
+                      name="YR_2006"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2007]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2007]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2007]"
+                      name="YR_2007"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2008]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2008]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2008]"
+                      name="YR_2008"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2009]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2009]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2009]"
+                      name="YR_2009"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2010]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2010]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2010]"
+                      name="YR_2010"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2011]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2011]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2011]"
+                      name="YR_2011"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2012]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2012]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2012]"
+                      name="YR_2012"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2013]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2013]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2013]"
+                      name="YR_2013"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2014]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2014]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2014]"
+                      name="YR_2014"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2015]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2015]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2015]"
+                      name="YR_2015"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2016]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2016]"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].Columns[YR_2016]"
+                      name="YR_2016"
+                      precision="28"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[rowid]"
+                      dataType="i4"
+                      name="rowid" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="indicator" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[cnts]"
+                      dataType="i4"
+                      name="cnts" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1970]"
+                      dataType="numeric"
+                      name="YR_1970"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1971]"
+                      dataType="numeric"
+                      name="YR_1971"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1972]"
+                      dataType="numeric"
+                      name="YR_1972"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1973]"
+                      dataType="numeric"
+                      name="YR_1973"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1974]"
+                      dataType="numeric"
+                      name="YR_1974"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1975]"
+                      dataType="numeric"
+                      name="YR_1975"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1976]"
+                      dataType="numeric"
+                      name="YR_1976"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1977]"
+                      dataType="numeric"
+                      name="YR_1977"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1978]"
+                      dataType="numeric"
+                      name="YR_1978"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1979]"
+                      dataType="numeric"
+                      name="YR_1979"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1980]"
+                      dataType="numeric"
+                      name="YR_1980"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1981]"
+                      dataType="numeric"
+                      name="YR_1981"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1982]"
+                      dataType="numeric"
+                      name="YR_1982"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1983]"
+                      dataType="numeric"
+                      name="YR_1983"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1984]"
+                      dataType="numeric"
+                      name="YR_1984"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1985]"
+                      dataType="numeric"
+                      name="YR_1985"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1986]"
+                      dataType="numeric"
+                      name="YR_1986"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1987]"
+                      dataType="numeric"
+                      name="YR_1987"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1988]"
+                      dataType="numeric"
+                      name="YR_1988"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1989]"
+                      dataType="numeric"
+                      name="YR_1989"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1990]"
+                      dataType="numeric"
+                      name="YR_1990"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1991]"
+                      dataType="numeric"
+                      name="YR_1991"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1992]"
+                      dataType="numeric"
+                      name="YR_1992"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1993]"
+                      dataType="numeric"
+                      name="YR_1993"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1994]"
+                      dataType="numeric"
+                      name="YR_1994"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1995]"
+                      dataType="numeric"
+                      name="YR_1995"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1996]"
+                      dataType="numeric"
+                      name="YR_1996"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1997]"
+                      dataType="numeric"
+                      name="YR_1997"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1998]"
+                      dataType="numeric"
+                      name="YR_1998"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_1999]"
+                      dataType="numeric"
+                      name="YR_1999"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2000]"
+                      dataType="numeric"
+                      name="YR_2000"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2001]"
+                      dataType="numeric"
+                      name="YR_2001"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2002]"
+                      dataType="numeric"
+                      name="YR_2002"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2003]"
+                      dataType="numeric"
+                      name="YR_2003"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2004]"
+                      dataType="numeric"
+                      name="YR_2004"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2005]"
+                      dataType="numeric"
+                      name="YR_2005"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2006]"
+                      dataType="numeric"
+                      name="YR_2006"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2007]"
+                      dataType="numeric"
+                      name="YR_2007"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2008]"
+                      dataType="numeric"
+                      name="YR_2008"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2009]"
+                      dataType="numeric"
+                      name="YR_2009"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2010]"
+                      dataType="numeric"
+                      name="YR_2010"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2011]"
+                      dataType="numeric"
+                      name="YR_2011"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2012]"
+                      dataType="numeric"
+                      name="YR_2012"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2013]"
+                      dataType="numeric"
+                      name="YR_2013"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2014]"
+                      dataType="numeric"
+                      name="YR_2014"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2015]"
+                      dataType="numeric"
+                      name="YR_2015"
+                      precision="28" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output].ExternalColumns[YR_2016]"
+                      dataType="numeric"
+                      name="YR_2016"
+                      precision="28" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[rowid]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[rowid]"
+                      name="rowid" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[indicator]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[indicator]"
+                      name="indicator" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      name="COUNTRY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[cnts]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[cnts]"
+                      name="cnts" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1970]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1970]"
+                      name="YR_1970"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1971]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1971]"
+                      name="YR_1971"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1972]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1972]"
+                      name="YR_1972"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1973]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1973]"
+                      name="YR_1973"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1974]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1974]"
+                      name="YR_1974"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1975]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1975]"
+                      name="YR_1975"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1976]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1976]"
+                      name="YR_1976"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1977]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1977]"
+                      name="YR_1977"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1978]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1978]"
+                      name="YR_1978"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1979]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1979]"
+                      name="YR_1979"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1980]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1980]"
+                      name="YR_1980"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1981]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1981]"
+                      name="YR_1981"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1982]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1982]"
+                      name="YR_1982"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1983]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1983]"
+                      name="YR_1983"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1984]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1984]"
+                      name="YR_1984"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1985]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1985]"
+                      name="YR_1985"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1986]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1986]"
+                      name="YR_1986"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1987]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1987]"
+                      name="YR_1987"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1988]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1988]"
+                      name="YR_1988"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1989]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1989]"
+                      name="YR_1989"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1990]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1990]"
+                      name="YR_1990"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1991]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1991]"
+                      name="YR_1991"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1992]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1992]"
+                      name="YR_1992"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1993]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1993]"
+                      name="YR_1993"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1994]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1994]"
+                      name="YR_1994"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1995]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1995]"
+                      name="YR_1995"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1996]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1996]"
+                      name="YR_1996"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1997]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1997]"
+                      name="YR_1997"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1998]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1998]"
+                      name="YR_1998"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1999]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_1999]"
+                      name="YR_1999"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2000]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2000]"
+                      name="YR_2000"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2001]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2001]"
+                      name="YR_2001"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2002]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2002]"
+                      name="YR_2002"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2003]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2003]"
+                      name="YR_2003"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2004]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2004]"
+                      name="YR_2004"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2005]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2005]"
+                      name="YR_2005"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2006]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2006]"
+                      name="YR_2006"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2007]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2007]"
+                      name="YR_2007"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2008]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2008]"
+                      name="YR_2008"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2009]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2009]"
+                      name="YR_2009"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2010]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2010]"
+                      name="YR_2010"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2011]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2011]"
+                      name="YR_2011"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2012]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2012]"
+                      name="YR_2012"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2013]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2013]"
+                      name="YR_2013"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2014]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2014]"
+                      name="YR_2014"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2015]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2015]"
+                      name="YR_2015"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2016]"
+                      dataType="numeric"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[YR_2016]"
+                      name="YR_2016"
+                      precision="28" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - WorldBankData_Cleaned_csv.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - EDATABLETOREVIEW.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>

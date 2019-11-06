@@ -1,0 +1,524 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="10/27/2019 9:16:35 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DEVLOPR"
+  DTS:CreatorName="DEVLOPR\Alan"
+  DTS:Description="SSIS Package Description"
+  DTS:DTSID="{4B50B94B-D3D9-407C-97BD-00C7CEC9D90A}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="12.0.4100.1"
+  DTS:LocaleID="1033"
+  DTS:MaxErrorCount="0"
+  DTS:ObjectName="RegressionAnalysisDataset"
+  DTS:ProtectionLevel="0"
+  DTS:VersionGUID="{F60BA157-946C-4CBA-A81F-86F7F112CFB3}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{0187AE9E-A99E-4CAE-BFF2-5034D1610F64}"
+      DTS:ObjectName="DestinationConnectionFlatFile">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="Y:\Data\DSC530\RegressionAnalysisDataset.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="255"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="COUNTRY"
+              DTS:DTSID="{B1A43CAD-ED11-4D0F-92BF-445423528008}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="1"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Democratic"
+              DTS:DTSID="{28BE05DF-24DA-4B9D-9541-0D09260DCBB9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="11"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="YR"
+              DTS:DTSID="{9E86A2A3-072C-4CAF-9FC0-13BDAC439287}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LaborToPopulationPct"
+              DTS:DTSID="{CB23F0AD-602D-4BD1-8CF4-6EAF0F9CCFC9}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="GDP"
+              DTS:DTSID="{C941D566-6AEB-41A2-B817-ED9130FB547B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LABORFORCE"
+              DTS:DTSID="{FCF4412C-F5A2-4E61-AF83-B8F80070B20E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="POPULATIONTOTAL"
+              DTS:DTSID="{2DAA201B-BC43-44D9-BA3E-FB3A3B1F8196}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="24"
+              DTS:DataType="5"
+              DTS:TextQualified="True"
+              DTS:ObjectName="TertiaryExpenditure"
+              DTS:DTSID="{5604D5B5-5598-49C6-87F0-3EA98381644A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{21F62C2D-0471-470E-A3C9-C6045B3247D0}"
+      DTS:ObjectName="SourceConnectionOLEDB">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=(local);Initial Catalog=DSC530;Provider=SQLNCLI11;Integrated Security=SSPI;Auto Translate=false;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task 1"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:DelayValidation="True"
+      DTS:DTSID="{7CBE9D82-342D-4DD2-B6E3-718FB6550B97}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:FailPackageOnFailure="True"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task 1"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          defaultBufferSize="3145728"
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Flat File Destination"
+              localeId="1033"
+              name="Destination - RegressionAnalysisDataset_csv"
+              validateExternalMetadata="False">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  connectionManagerRefId="Package.ConnectionManagers[DestinationConnectionFlatFile]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[COUNTRY]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="255"
+                      cachedName="COUNTRY"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[COUNTRY]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[COUNTRY]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[Democratic]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="1"
+                      cachedName="Democratic"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[Democratic]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[Democratic]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[YR]"
+                      cachedDataType="i4"
+                      cachedName="YR"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[YR]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[YR]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[LaborToPopulationPct]"
+                      cachedDataType="r8"
+                      cachedName="LaborToPopulationPct"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[LaborToPopulationPct]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LaborToPopulationPct]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[GDP]"
+                      cachedDataType="r8"
+                      cachedName="GDP"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[GDP]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[GDP]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[LABORFORCE]"
+                      cachedDataType="r8"
+                      cachedName="LABORFORCE"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[LABORFORCE]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LABORFORCE]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[POPULATIONTOTAL]"
+                      cachedDataType="r8"
+                      cachedName="POPULATIONTOTAL"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[POPULATIONTOTAL]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[POPULATIONTOTAL]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].Columns[TertiaryExpenditure]"
+                      cachedDataType="r8"
+                      cachedName="TertiaryExpenditure"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[TertiaryExpenditure]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[TertiaryExpenditure]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[Democratic]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Democratic" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[YR]"
+                      dataType="i4"
+                      name="YR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[LaborToPopulationPct]"
+                      dataType="r8"
+                      name="LaborToPopulationPct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[GDP]"
+                      dataType="r8"
+                      name="GDP" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[LABORFORCE]"
+                      dataType="r8"
+                      name="LABORFORCE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[POPULATIONTOTAL]"
+                      dataType="r8"
+                      name="POPULATIONTOTAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input].ExternalColumns[TertiaryExpenditure]"
+                      dataType="r8"
+                      name="TertiaryExpenditure" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
+              description="OLE DB Source"
+              name="Source - vwRegressionAnalysisDataset"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[vwRegressionAnalysisDataset]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.String"
+                  description="The variable that contains the SQL command to be executed."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">0</property>
+                <property
+                  dataType="System.String"
+                  description="The mappings between the parameters in the SQL command and variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  connectionManagerRefId="Package.ConnectionManagers[SourceConnectionOLEDB]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output]"
+                  name="OLE DB Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[COUNTRY]"
+                      name="COUNTRY"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[Democratic]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[Democratic]"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[Democratic]"
+                      name="Democratic"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[YR]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[YR]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[YR]"
+                      name="YR"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LaborToPopulationPct]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[LaborToPopulationPct]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LaborToPopulationPct]"
+                      name="LaborToPopulationPct"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[GDP]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[GDP]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[GDP]"
+                      name="GDP"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LABORFORCE]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[LABORFORCE]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[LABORFORCE]"
+                      name="LABORFORCE"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[POPULATIONTOTAL]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[POPULATIONTOTAL]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[POPULATIONTOTAL]"
+                      name="POPULATIONTOTAL"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[TertiaryExpenditure]"
+                      dataType="r8"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[TertiaryExpenditure]"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].Columns[TertiaryExpenditure]"
+                      name="TertiaryExpenditure"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      name="COUNTRY" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[Democratic]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      name="Democratic" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[YR]"
+                      dataType="i4"
+                      name="YR" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[LaborToPopulationPct]"
+                      dataType="r8"
+                      name="LaborToPopulationPct" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[GDP]"
+                      dataType="r8"
+                      name="GDP" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[LABORFORCE]"
+                      dataType="r8"
+                      name="LABORFORCE" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[POPULATIONTOTAL]"
+                      dataType="r8"
+                      name="POPULATIONTOTAL" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output].ExternalColumns[TertiaryExpenditure]"
+                      dataType="r8"
+                      name="TertiaryExpenditure" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output]"
+                  isErrorOut="true"
+                  name="OLE DB Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      codePage="1252"
+                      dataType="str"
+                      length="255"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[COUNTRY]"
+                      name="COUNTRY" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[Democratic]"
+                      codePage="1252"
+                      dataType="str"
+                      length="1"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[Democratic]"
+                      name="Democratic" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[YR]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[YR]"
+                      name="YR" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[LaborToPopulationPct]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[LaborToPopulationPct]"
+                      name="LaborToPopulationPct" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[GDP]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[GDP]"
+                      name="GDP" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[LABORFORCE]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[LABORFORCE]"
+                      name="LABORFORCE" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[POPULATIONTOTAL]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[POPULATIONTOTAL]"
+                      name="POPULATIONTOTAL" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[TertiaryExpenditure]"
+                      dataType="r8"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[TertiaryExpenditure]"
+                      name="TertiaryExpenditure" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task 1.Paths[OLE DB Source Output]"
+              endId="Package\Data Flow Task 1\Destination - RegressionAnalysisDataset_csv.Inputs[Flat File Destination Input]"
+              name="OLE DB Source Output"
+              startId="Package\Data Flow Task 1\Source - vwRegressionAnalysisDataset.Outputs[OLE DB Source Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+</DTS:Executable>
