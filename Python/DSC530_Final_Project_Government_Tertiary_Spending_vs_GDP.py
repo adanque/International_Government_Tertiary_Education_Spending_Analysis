@@ -33,6 +33,7 @@ from matplotlib import pyplot
 from statsmodels.formula.api import ols
 from scipy.stats import chisquare
 
+import statistics
 import statsmodels.formula.api as smf
 import pymssql
 import pandas as pd
@@ -76,7 +77,8 @@ def Mode(n_num):
     data = Counter(n_num)
     get_mode = dict(data)
     mode = [k for k, v in get_mode.items() if v == max(list(data.values()))]
-
+    # print("Mode of given data set is % s" % (statistics.mode(set1)))
+    #### get_mode = "Mode of given data set is % s" % (statistics.mode(data))
     if len(mode) == n:
         get_mode = "No mode found"
     else:
@@ -463,9 +465,9 @@ def main():
     """
     Connect to my local sql server
     """
-    server = "192.168.1.28"
-    user = "usrDSC530"
-    password = "UniversalStudio99"
+    server = "SERVERNAME_REMOVED"
+    user = "USERNAME_REMOVED"
+    password = "PASSWORD_REMOVED"
     conn = pymssql.connect(server, user, password, "DSC530")
 
     WorldBankData = []
